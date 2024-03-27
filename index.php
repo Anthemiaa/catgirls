@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Uploads</title>
+    <title>catgirls</title>
     <style>
         body {
             background-color: #222;
