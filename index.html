@@ -1,54 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        body {
-            background-color: #1f2937;
-            color: white;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-        }
-        .images {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-        img {
-            width: 300px;
-            height: 200px;
-            object-fit: cover;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Gallery</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="images"></div>
-    <script>
-        // Replace with the path to your images folder
-        const imageFolder = './images/';
-        const imageExtensions = ['.jpg', '.jpeg', '.png'];
-        let imageCount = 0;
+  <div id="image-gallery"></div>
 
-        function loadImages() {
-            const directoryHandle = window.showDirectoryPicker();
-            directoryHandle.then(handle => {
-                for (const entry of handle.entries()) {
-                    if (entry.isFile && imageExtensions.includes(entry.name.slice(-4).toLowerCase())) {
-                        const img = document.createElement('img');
-                        img.src = `${imageFolder}${entry.name}`;
-                        img.alt = `Image ${imageCount}`;
-                        document.querySelector('.images').appendChild(img);
-                        imageCount++;
-                    }
-                }
-            });
-        }
-
-        window.addEventListener('load', loadImages);
-    </script>
+  <script src="script.js"></script>
 </body>
 </html>
